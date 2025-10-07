@@ -1,0 +1,270 @@
+/* ================================
+   Reset básico y tipografía
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.5;
+}
+
+h2, h3, h4, h5 {
+    margin-bottom: 0.5em;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ================================
+   Contenedor principal
+================================ */
+.container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+/* ================================
+   Header
+================================ */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header h2 {
+    font-size: 1.8rem;
+    color: #ff5722;
+}
+
+.header .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-danger {
+    background: #e53935;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c62828;
+}
+
+/* ================================
+   Pedidos Grid
+================================ */
+.pedidos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+/* ================================
+   Pedido Card
+================================ */
+.pedido-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pedido-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.pedido-card h4 {
+    color: #ff5722;
+    margin-bottom: 0.5rem;
+}
+
+.pedido-card p {
+    margin: 0.3rem 0;
+}
+
+.estado {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+/* ================================
+   Estados colores
+================================ */
+.pendiente .estado {
+    color: #ff9800;
+}
+
+.pagado .estado {
+    color: #4caf50;
+}
+
+.cancelado .estado {
+    color: #f44336;
+}
+
+/* ================================
+   Items del pedido
+================================ */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 0.8rem;
+    margin: 1rem 0;
+}
+
+.item-card {
+    background: #fafafa;
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.item-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.3rem;
+}
+
+/* ================================
+   Formulario de acciones
+================================ */
+.acciones {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-fields div {
+    flex: 1 1 140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.acciones label {
+    font-weight: 500;
+    margin-bottom: 0.2rem;
+}
+
+.acciones select,
+.acciones input[type="number"] {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.btn-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.acciones button {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-success {
+    background: #4caf50;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #388e3c;
+}
+
+.btn-warning {
+    background: #ff9800;
+    color: white;
+}
+
+.btn-warning:hover {
+    background: #f57c00;
+}
+
+/* ================================
+   Badges
+================================ */
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    border-radius: 12px;
+    font-weight: bold;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.badge-success {
+    background: #4caf50;
+}
+
+.badge-danger {
+    background: #f44336;
+}
+
+/* ================================
+   Mensaje de vacio
+================================ */
+.vacio {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 2rem;
+}
+
+/* ================================
+   Responsive
+================================ */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .pedidos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-fields {
+        flex-direction: column;
+    }
+}

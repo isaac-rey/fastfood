@@ -1,0 +1,160 @@
+/* ======== RESET ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  padding: 20px;
+}
+
+/* ======== CONTENEDOR ======== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ======== HEADER ======== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  gap: 15px;
+  text-align: center;
+}
+.header img {
+  width: 60px;
+  height: 60px;
+}
+.header h2 {
+  font-size: 2rem;
+  color: #d62828;
+  font-weight: 700;
+}
+
+/* ======== TITULOS ======== */
+h3 {
+  margin: 30px 0 10px;
+  color: #1d3557;
+  font-size: 1.5rem;
+  border-left: 5px solid #457b9d;
+  padding-left: 10px;
+}
+
+/* ======== TABLAS ======== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+}
+th {
+  background: #457b9d;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+tr:nth-child(even) {
+  background: #f1f5f9;
+}
+tr:hover {
+  background: #e0f0ff;
+  transition: 0.3s;
+}
+
+/* ======== INPUTS ======== */
+input[type="number"] {
+  width: 60px;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+input[type="number"]:focus {
+  border-color: #457b9d;
+}
+
+/* ======== BOTONES ======== */
+.btn {
+  background: #1d3557;
+  color: #fff;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #e63946;
+  transform: translateY(-2px);
+}
+
+/* ======== ALERTA CARRITO VACÍO ======== */
+p {
+  padding: 10px;
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .header h2 {
+    font-size: 1.5rem;
+  }
+  th, td {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+  .btn {
+    width: 100%;
+    margin-top: 5px;
+  }
+  input[type="number"] {
+    width: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead {
+    display: none;
+  }
+  tr {
+    margin-bottom: 15px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+  td {
+    padding: 10px;
+    position: relative;
+  }
+  td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    color: #1d3557;
+    margin-bottom: 5px;
+  }
+}

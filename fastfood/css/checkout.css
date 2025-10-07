@@ -1,0 +1,130 @@
+/* ======== RESET GLOBAL ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  color: #333;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* ======== CONTENEDOR ======== */
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(15px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* ======== HEADER ======== */
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.header img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+.header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #d62828;
+}
+
+/* ======== TITULO ======== */
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #1d3557;
+  text-align: center;
+  border-bottom: 2px solid #457b9d;
+  padding-bottom: 8px;
+}
+
+/* ======== FORMULARIO ======== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #1d3557;
+}
+
+input {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #457b9d;
+  box-shadow: 0 0 5px rgba(69, 123, 157, 0.5);
+}
+
+/* ======== BOTÓN ======== */
+.btn {
+  background: #1d3557;
+  color: #fff;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #e63946;
+  transform: translateY(-2px);
+}
+
+/* ======== MENSAJE DE ERROR ======== */
+.error {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  .btn {
+    font-size: 1rem;
+  }
+}
